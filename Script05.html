@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Types and Variables</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element once
+    const output = document.getElementById("output");
+
+    // Modern print function
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // Heading
+    print("<u>Data Types and Variables</u><br>");
+
+    // Number
+    const x = 10;
+    print(x);
+    print(typeof x);
+
+    // Float
+    const y = 9.9;
+    print(y);
+    print(typeof y);
+
+    // Boolean
+    const flag1 = true;
+    print(flag1);
+    print(typeof flag1);
+
+    const flag2 = false;
+    print(flag2);
+    print(typeof flag2);
+
+    // String
+    const myName = "Srinivas";
+    print(myName);
+    print(typeof myName);
+
+    // Array
+    const myArray = [10, 20, 30, 40, 50];
+    print(myArray);
+    print(typeof myArray);
+
+    // Date
+    const myDob = new Date();
+    print(myDob);
+    print(typeof myDob);
+  </script>
+
+</body>
+</html>

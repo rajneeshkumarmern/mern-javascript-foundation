@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: typeof, new, instanceof (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>8) typeof, 9) new, 10) instanceof</u>");
+
+  // typeof examples
+  let a = 19;
+  myprint(a);
+  myprint(`typeof a => ${typeof a}`);
+
+  a = 9.9;
+  myprint(a);
+  myprint(`typeof a => ${typeof a}`);
+
+  a = "Hello Guys";
+  myprint(a);
+  myprint(`typeof a => ${typeof a}`);
+
+  // Using new (object wrappers)
+  const mystr = new String("Hello Guys");
+  myprint(mystr);
+  myprint(`typeof mystr => ${typeof mystr}`);
+
+  // Array
+  const arr = [10, 20, 30];
+  myprint(arr);
+  myprint(`typeof arr => ${typeof arr}`);
+
+  // Date
+  const dob = new Date();
+  myprint(`${dob.getDate()}-${dob.getMonth() + 1}-${dob.getFullYear()}`);
+  myprint(`typeof dob => ${typeof dob}`);
+
+  myprint("---------------");
+
+  // instanceof checks
+  myprint(`dob instanceof Date => ${dob instanceof Date}`);
+  myprint(`dob instanceof Array => ${dob instanceof Array}`);
+  myprint(`dob instanceof String => ${dob instanceof String}`);
+
+  myprint("---------------");
+
+  myprint(`arr instanceof Date => ${arr instanceof Date}`);
+  myprint(`arr instanceof Array => ${arr instanceof Array}`);
+  myprint(`arr instanceof String => ${arr instanceof String}`);
+
+  myprint("---------------");
+
+  myprint(`mystr instanceof Date => ${mystr instanceof Date}`);
+  myprint(`mystr instanceof Array => ${mystr instanceof Array}`);
+  myprint(`mystr instanceof String => ${mystr instanceof String}`);
+
+  myprint("---------------");
+
+  // All are objects internally
+  myprint(`mystr instanceof Object => ${mystr instanceof Object}`);
+  myprint(`arr instanceof Object => ${arr instanceof Object}`);
+  myprint(`dob instanceof Object => ${dob instanceof Object}`);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: in & delete Operators (Array - Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>in Operator & delete Operator (Array)</u>");
+
+  // Modern array
+  const arr = [10, 99.99, "Srinivas Dande", true];
+
+  myprint(arr);
+  myprint(`typeof arr => ${typeof arr}`);
+
+  // Loop through array
+  for (const index in arr) {
+    myprint(`${index} - ${arr[index]}`);
+  }
+
+  myprint("---------------");
+
+  // 'in' operator
+  myprint(`0 in arr => ${0 in arr}`);
+  myprint(`1 in arr => ${1 in arr}`);
+  myprint(`2 in arr => ${2 in arr}`);
+  myprint(`4 in arr => ${4 in arr}`);
+  myprint(`5 in arr => ${5 in arr}`);
+  myprint(`"length" in arr => ${"length" in arr}`);
+
+  myprint("---------------");
+
+  // delete elements
+  myprint(`Before delete arr[2] => ${arr[2]}`);
+  delete arr[2];
+  myprint(`After delete arr[2] => ${arr[2]}`);
+
+  myprint(`Before delete arr[1] => ${arr[1]}`);
+  delete arr[1];
+  myprint(`After delete arr[1] => ${arr[1]}`);
+
+  myprint("---------------");
+
+  // Array length after delete
+  myprint(`Array Size => ${arr.length}`);
+
+  // Loop again
+  for (const index in arr) {
+    myprint(`${index} - ${arr[index]}`);
+  }
+
+  myprint("-------------");
+
+  myprint(arr);
+
+  // delete array variable (not allowed in modern JS)
+  // delete arr; 
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

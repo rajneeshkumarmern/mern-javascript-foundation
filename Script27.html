@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Arrays - 2 (Modern)</title>
+  <style>
+    input, h1, div {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      width: 500px;
+      font-size: 25px;
+      background-color: goldenrod;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="my-data-div"></div>
+
+<script>
+  const mydiv = document.getElementById("my-data-div");
+
+  const print = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  print("<u>Arrays - 2</u>");
+
+  // ✅ Single element array
+  const arr1 = ["Hello Guys"];
+  print(arr1.length);
+  print(arr1);
+
+  print("------------");
+
+  // ⚠️ Array with size (not recommended)
+  let arr2 = new Array(5);
+  print(`Before Assigning - Size: ${arr2.length}`);
+  print(arr2);
+
+  print("------------");
+
+  // Assign values
+  arr2[0] = 10;
+  arr2[2] = 99.9;
+  arr2[4] = "Hello Guys";
+  arr2[5] = true;
+  arr2[99] = "OK";
+
+  print(`After Assigning - Size: ${arr2.length}`);
+
+  // for...in (indexes where values exist)
+  for (const i in arr2) {
+    print(`${i} : ${arr2[i]}`);
+  }
+
+  print("------------");
+
+  // Normal loop (includes empty slots)
+  for (let i = 0; i < arr2.length; i++) {
+    print(arr2[i]);
+  }
+
+  print("Done");
+</script>
+
+</body>
+</html>

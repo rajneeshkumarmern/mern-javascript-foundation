@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: in & delete Operators (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>11) in Operator & 12) delete Operator</u>");
+
+  // Avoid new String (not recommended), but shown for learning
+  const mystr = new String("Hello Guys");
+
+  myprint(mystr);
+  myprint(`typeof mystr => ${typeof mystr}`);
+
+  // for...in loop (indexes of string)
+  for (const index in mystr) {
+    myprint(`${index} - ${mystr[index]}`);
+  }
+
+  // 'in' operator
+  myprint(`0 in mystr => ${0 in mystr}`);
+  myprint(`1 in mystr => ${1 in mystr}`);
+  myprint(`2 in mystr => ${2 in mystr}`);
+  myprint(`9 in mystr => ${9 in mystr}`);
+  myprint(`10 in mystr => ${10 in mystr}`);
+  myprint(`11 in mystr => ${11 in mystr}`);
+  myprint(`"length" in mystr => ${"length" in mystr}`);
+
+  myprint("-------------");
+
+  // delete on object property (not effective on string indexes)
+  myprint(`Before delete mystr[0] => ${mystr[0]}`);
+  delete mystr[0];
+  myprint(`After delete mystr[0] => ${mystr[0]}`);
+
+  myprint("-------------");
+
+  // delete object reference (will not work with const)
+let obj = { tempStr: "Hello" };
+  myprint(`Before delete obj.tempStr => ${obj.tempStr}`);
+  delete obj.tempStr; 
+  myprint(`After delete obj.tempStr => ${obj.tempStr}`);
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

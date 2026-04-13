@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Variables</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element once
+    const output = document.getElementById("output");
+
+    // Print function (modern)
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // Heading
+    print("<u>Variables</u><br>");
+
+    // var (can redeclare)
+    var x = 10;
+    print(x);
+
+    var x = "Hello Guys"; // redeclared
+    print(x);
+
+    // let (cannot redeclare, but can reassign)
+    let y = 20;
+    print(y);
+
+    // let y = "Hai Guys"; ❌ Error (redeclare not allowed)
+
+    y = "Hai Guys"; // ✅ allowed (reassign)
+    print(y);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Events - Modern</title>
+</head>
+
+<body>
+
+<h2>Welcome to JLC!!!</h2>
+
+<p id="js">JS Training</p>
+<p id="react">React Training</p>
+<p id="angular">Angular Training</p>
+
+<script>
+  alert("Hello Guys, How are You?");
+
+  // Select elements
+  const js = document.getElementById("js");
+  const react = document.getElementById("react");
+  const angular = document.getElementById("angular");
+
+  // Add events (modern way)
+  js.addEventListener("click", () => {
+    alert("Click on JS Training");
+    console.log("Click on JS Training");
+  });
+
+  react.addEventListener("dblclick", () => {
+    alert("Double Click on React Training");
+    console.log("Double Click on React Training");
+  });
+
+  angular.addEventListener("mouseover", () => {
+    console.log("MouseOver on Angular Training");
+  });
+
+  angular.addEventListener("mouseout", () => {
+    console.log("MouseOut on Angular Training");
+  });
+</script>
+
+</body>
+</html>

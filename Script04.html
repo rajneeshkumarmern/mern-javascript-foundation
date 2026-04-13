@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Template - Modern</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element
+    const output = document.getElementById("output");
+
+    // Function to print data
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // Program starts here
+    print("<u>Topic Heading Here:</u>");
+
+    // Topic Related Program
+    const x = 10;
+    print(x);
+
+    const y = 20;
+    print(y);
+
+    const sum = x + y;
+    print("Sum: " + sum);
+  </script>
+
+</body>
+</html>

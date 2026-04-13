@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS - Updating DOM</title>
+</head>
+
+<body>
+
+  <h1 id="hello">Hello Guys</h1>
+  <div id="hai">Hai Guys</div>
+
+  <button id="btn">Change Text</button>
+
+  <script>
+    // Select elements
+    const hello = document.getElementById("hello");
+    const hai = document.getElementById("hai");
+    const btn = document.getElementById("btn");
+
+    // Add event listener
+    btn.addEventListener("click", () => {
+      console.log(hello.textContent);
+      hello.textContent = "Welcome to CourseCube !!!";
+      console.log(hello.textContent);
+
+      console.log(hai.textContent);
+      hai.textContent = hai.textContent + " OK!!!";
+      console.log(hai.textContent);
+    });
+  </script>
+
+</body>
+</html>

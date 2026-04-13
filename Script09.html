@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Variable Scope</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element once
+    const output = document.getElementById("output");
+
+    // Print function (modern)
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // 1️⃣ Heading
+    print("<u>Variable Scope</u><br>");
+
+    // 2️⃣ Global scope
+    const x = 10;
+
+    // Function (modern arrow function)
+    const show = () => {
+      // Function scope
+      const y = 20;
+
+      if (true) {
+        // Block scope
+        const z = 30;
+
+        print("Inside If - x = " + x);
+        print("Inside If - y = " + y);
+        print("Inside If - z = " + z);
+      }
+
+      print("After If - x = " + x);
+      print("After If - y = " + y);
+
+      // ❌ z not accessible here
+      // print("After If - z = " + z); // Error
+    };
+
+    // 3️⃣ Function call
+    show();
+
+    // 4️⃣ Global access
+    print("Outside show() - x = " + x);
+
+    // ❌ Not accessible outside function/block
+    // print("Outside show() - y = " + y); // Error
+    // print("Outside show() - z = " + z); // Error
+  </script>
+
+</body>
+</html>

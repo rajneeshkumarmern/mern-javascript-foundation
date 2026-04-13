@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS: Operators - Modern Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #mydiv {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+    const mydiv = document.getElementById("mydiv");
+
+    const myprint = (data) => {
+        mydiv.innerHTML += `${data}<br/>`;
+    };
+
+    // 1) Arithmetic Operators
+    myprint("<u>1) Arithmetic Operators</u> :");
+
+    let a = 5;
+    let b = 2;
+
+    myprint(`a => ${a}`);
+    myprint(`b => ${b}`);
+    myprint(`a + b => ${a + b}`);
+    myprint(`a - b => ${a - b}`);
+    myprint(`a * b => ${a * b}`);
+    myprint(`a ** b => ${a ** b}`); // power
+    myprint(`a / b => ${a / b}`);
+    myprint(`a % b => ${a % b}`);
+
+    // 2) Assignment Operators
+    myprint("<u>2) Assignment Operators</u> :");
+
+    a = 5;
+    a += 2;
+    myprint(`a += 2 => ${a}`);
+
+    a = 5;
+    a -= 2;
+    myprint(`a -= 2 => ${a}`);
+
+    a = 5;
+    a *= 2;
+    myprint(`a *= 2 => ${a}`);
+
+    a = 5;
+    a **= 2;
+    myprint(`a **= 2 => ${a}`);
+
+    a = 5;
+    a /= 2;
+    myprint(`a /= 2 => ${a}`);
+
+    a = 5;
+    a %= 2;
+    myprint(`a %= 2 => ${a}`);
+</script>
+
+</body>
+</html>

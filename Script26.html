@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Arrays - 1 (Modern)</title>
+  <style>
+    input, h1, div {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      width: 500px;
+      font-size: 25px;
+      background-color: goldenrod;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="my-data-div"></div>
+
+<script>
+  const mydiv = document.getElementById("my-data-div");
+
+  const print = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  print("<u>Arrays - 1</u>");
+
+  // ✅ Array (literal way)
+  const arr1 = [10, 20, 30];
+  print(arr1);
+  print(typeof arr1);
+
+  for (let i = 0; i < arr1.length; i++) {
+    print(arr1[i]);
+  }
+
+  print("------------");
+
+  // ✅ String array
+  const arr2 = ["Java", "JavaScript", "Angular"];
+  print(arr2);
+  print(typeof arr2);
+
+  for (const item of arr2) {
+    print(item);
+  }
+
+  print("------------");
+
+  // ⚠️ Array using constructor (not recommended)
+  const arr3 = new Array(10, 20, 30);
+  for (const item of arr3) {
+    print(item);
+  }
+
+  print("------------");
+
+  const arr4 = new Array("Java", "JavaScript", "Angular");
+  arr4.forEach(item => print(item));
+
+  print("------------");
+
+  print("Done");
+</script>
+
+</body>
+</html>

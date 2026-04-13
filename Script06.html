@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Types and Variables</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element once
+    const output = document.getElementById("output");
+
+    // Print function (modern)
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // Heading
+    print("<u>Data Types and Variables</u><br>");
+
+    // Use let because value is changing
+    let x = 10;
+    print(x);
+    print(typeof x);
+
+    x = 9.9;
+    print(x);
+    print(typeof x);
+
+    x = true;
+    print(x);
+    print(typeof x);
+
+    x = false;
+    print(x);
+    print(typeof x);
+
+    x = "Srinivas";
+    print(x);
+    print(typeof x);
+
+    x = [10, 20, 30, 40, 50];
+    print(x);
+    print(typeof x);
+
+    x = new Date();
+    print(x);
+    print(typeof x);
+  </script>
+
+</body>
+</html>

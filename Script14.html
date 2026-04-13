@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Increment & Decrement (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>5) Increment and Decrement Operators</u> :");
+
+  // Post-increment
+  let a = 10;
+  myprint(`a++ => ${a++}`); // 10
+  myprint(`a => ${a}`);     // 11
+
+  // Pre-increment
+  let b = 10;
+  myprint(`++b => ${++b}`); // 11
+  myprint(`b => ${b}`);     // 11
+
+  myprint("Done");
+
+  // Mixed operations
+  a = 5;
+  myprint(`a => ${a}`);       // 5
+  myprint(`++a => ${++a}`);   // 6
+  myprint(`++a => ${++a}`);   // 7
+  myprint(`a-- => ${a--}`);   // 7
+  myprint(`a++ => ${a++}`);   // 6
+  myprint(`--a => ${--a}`);   // 6
+  myprint(`a => ${a}`);       // 6
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

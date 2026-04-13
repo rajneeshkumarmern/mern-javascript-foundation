@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Ternary Operator (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>6) Ternary Operator ? :</u>");
+
+  // Two values
+  let a = 10;
+  let b = 20;
+
+  const max = (a > b) ? a : b;
+  const min = (a < b) ? a : b;
+
+  myprint(`Max: ${max}`);
+  myprint(`Min: ${min}`);
+
+  myprint("--------");
+
+  // Three values
+  a = 10;
+  b = 20;
+  let c = 30;
+
+  const max3 = (a > b && a > c) ? a : (b > c ? b : c);
+  const min3 = (a < b && a < c) ? a : (b < c ? b : c);
+
+  myprint(`Max: ${max3}`);
+  myprint(`Min: ${min3}`);
+</script>
+
+</body>
+</html>

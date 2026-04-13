@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Creating HTML Elements (Modern)</title>
+  <style>
+    div {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      width: 500px;
+      font-size: 25px;
+      background-color: goldenrod;
+      padding-left: 20px;
+    }
+    #mytable {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      width: 30%;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    ul {
+      list-style: circle;
+    }
+  </style>
+</head>
+<body>
+
+<div id="my-data-div"></div>
+
+<script>
+  const mydiv = document.getElementById("my-data-div");
+
+  const print = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  print("<u>Creating HTML elements with JS</u>");
+
+  const arr = ["Java", "Angular", "Python"];
+
+  // ✅ Create list using map
+  const listHTML = `
+    <ul>
+      ${arr.map(item => `<li>${item}</li>`).join("")}
+    </ul>
+  `;
+  print(listHTML);
+
+  // ✅ Create table using map
+  const tableHTML = `
+    <table id="mytable">
+      ${arr.map(item => `<tr><td>${item}</td></tr>`).join("")}
+    </table>
+  `;
+  print(tableHTML);
+
+  print("Done");
+</script>
+
+</body>
+</html>

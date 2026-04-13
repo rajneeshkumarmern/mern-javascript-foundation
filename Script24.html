@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: While & Do-While Loop (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>While and Do-While Loop</u>");
+
+  // While loop
+  let i = 1;
+  while (i <= 5) {
+    myprint(i);
+    i++;
+  }
+
+  myprint("-------------");
+
+  // Do-while loop
+  i = 1;
+  do {
+    myprint(i);
+    i++;
+  } while (i <= 5);
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

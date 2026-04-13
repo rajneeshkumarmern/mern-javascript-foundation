@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Bitwise Operators (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>7) Bitwise Operators</u>");
+
+  let a = 19;
+
+  // Shift operators
+  myprint(`a << 1 => ${a << 1}`);
+  myprint(`a << 2 => ${a << 2}`);
+  myprint(`a >> 1 => ${a >> 1}`);
+  myprint(`a >> 2 => ${a >> 2}`);
+
+  // Bitwise operations
+  let x = 15;
+  let y = 17;
+
+  myprint(`x & y => ${x & y}`);
+  myprint(`x | y => ${x | y}`);
+  myprint(`x ^ y => ${x ^ y}`);
+  myprint(`~x => ${~x}`);
+  myprint(`~y => ${~y}`);
+
+  // Binary examples (modern way)
+  let bin = 0b0101; // binary for 5
+
+  myprint(`0b0101 << 1 => ${bin << 1}`);
+  myprint(`0b0101 >> 1 => ${bin >> 1}`);
+  myprint(`0b0101 >> 2 => ${bin >> 2}`);
+</script>
+
+</body>
+</html>

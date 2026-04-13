@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Switch Statement (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>Switch Statement</u>");
+
+  // Day example
+  const day = new Date().getDay(); // Get current day (0-6);
+ 
+  switch (day) {
+    case 0:
+      myprint("Sunday");
+      break;
+    case 1:
+      myprint("Monday");
+      break;
+    case 2:
+      myprint("Tuesday");
+      break;
+    case 3:
+      myprint("Wednesday");
+      break;
+    case 4:
+      myprint("Thursday");
+      break;
+    case 5:
+      myprint("Friday");
+      break;
+    case 6:
+      myprint("Saturday");
+      break;
+      
+    default:
+      
+  }
+
+  myprint("-------------");
+myprint("Invalid");
+     
+
+  // Type comparison example
+  let x = "0";
+
+  switch (x) {
+    case 0:
+      myprint("Zero (number)");
+      break;
+    case 1:
+      myprint("One (number)");
+      break;
+    default:
+      myprint("Invalid (number case)");
+  }
+
+  myprint("-------------");
+
+  // Correct string comparison
+  switch (x) {
+    case "0":
+      myprint("Zero (string)");
+      break;
+    case "1":
+      myprint("One (string)");
+      break;
+    default:
+      myprint("Invalid (string case)");
+  }
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

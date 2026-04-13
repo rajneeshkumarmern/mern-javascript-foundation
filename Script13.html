@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Logical Operators (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>4) Logical Operators</u> :");
+
+  // AND (&&)
+  myprint(`true && true => ${true && true}`);
+  myprint(`true && false => ${true && false}`);
+  myprint(`false && true => ${false && true}`);
+  myprint(`false && false => ${false && false}`);
+
+  // OR (||)
+  myprint(`true || true => ${true || true}`);
+  myprint(`true || false => ${true || false}`);
+  myprint(`false || true => ${false || true}`);
+  myprint(`false || false => ${false || false}`);
+
+  // NOT (!)
+  myprint(`!true => ${!true}`);
+  myprint(`!false => ${!false}`);
+</script>
+
+</body>
+</html>

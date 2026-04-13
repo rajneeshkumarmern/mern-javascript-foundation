@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: const keyword (Modern)</title>
+  <style>
+    div {
+      margin: 50px;
+      border: 2px solid red;
+      border-radius: 10px;
+      width: 500px;
+      font-size: 25px;
+      background-color: goldenrod;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="my-data-div"></div>
+
+<script>
+  const mydiv = document.getElementById("my-data-div");
+
+  const print = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  print("<u>const keyword</u>");
+
+  // let example (reassign allowed)
+  let x = 10;
+  print(x);
+
+  x = 20;
+  print(x);
+
+  print("-------------");
+
+  // const example (reassign NOT allowed)
+  const y = 100;
+  print(y);
+
+  // y = 200; ❌ Error
+  // print(y);
+
+  print("-------------");
+
+  // const array
+  const arr = [10, 20, 30, 40, 50];
+  print(arr);
+
+  // modifying array is allowed
+  arr[1] = 99;
+  print(arr);
+
+  print("-------------");
+
+  // reassigning array is NOT allowed
+  // arr = [99, 88, 77]; ❌ Error
+
+  print("Done");
+</script>
+
+</body>
+</html>

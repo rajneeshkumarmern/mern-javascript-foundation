@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: Literals (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>Literals</u>");
+
+  // Number literals
+  let x = 101;
+  myprint(`Decimal: ${x}`);
+
+  x = 0o101; // octal (modern)
+  myprint(`Octal (0o101): ${x}`);
+
+  x = 0x101; // hexadecimal
+  myprint(`Hex (0x101): ${x}`);
+
+  x = 0b101; // binary
+  myprint(`Binary (0b101): ${x}`);
+
+  myprint("-------------");
+
+  // Floating / exponential
+  x = 9.9;
+  myprint(`Float: ${x}`);
+
+  x = 9.999e2; // exponential
+  myprint(`Exponential (9.999e2): ${x}`);
+
+  myprint("-------------");
+
+  // Boolean literals
+  x = true;
+  myprint(`Boolean: ${x}`);
+
+  x = false;
+  myprint(`Boolean: ${x}`);
+
+  myprint("-------------");
+
+  // String literals
+  x = "Hello";
+  myprint(`String: ${x}`);
+
+  x = "A";
+  myprint(`Char: ${x}`);
+
+  // Unicode
+  x = "\u0041";
+  myprint(`Unicode \\u0041: ${x}`);
+
+  x = "\u0041\u0042";
+  myprint(`Unicode \\u0041\\u0042: ${x}`);
+
+  // Octal escape (not recommended)
+let z= "\u0041";  
+  myprint(`Octal \\101: ${z}`);
+
+let y = "\u0041\u0042"; // AB
+//   myprint(`Octal \\101\\102: ${x}`);
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

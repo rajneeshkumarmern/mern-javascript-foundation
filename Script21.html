@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS: If Statement (Modern)</title>
+  <style>
+    div {
+      margin: 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mydiv"></div>
+
+<script>
+  const mydiv = document.getElementById("mydiv");
+
+  const myprint = (data) => {
+    mydiv.innerHTML += `${data}<br/>`;
+  };
+
+  myprint("<u>If Statement</u>");
+
+  // Simple if
+  let a = 10;
+
+  if (a > 10) {
+    myprint("a is greater than 10");
+  }
+
+  if (a === 10) {
+    myprint("a is equal to 10");
+  }
+
+  myprint("--------");
+
+  // Find max of two numbers
+  let b = 20;
+  let max = (a > b) ? a : b;
+
+  myprint(`Max: ${max}`);
+
+  myprint("--------");
+
+  // Find max of three numbers
+  let c = 30;
+
+  if (a > b && a > c) {
+    max = a;
+  } else if (b > c) {
+    max = b;
+  } else {
+    max = c;
+  }
+
+  myprint(`Max: ${max}`);
+
+  myprint("Done");
+</script>
+
+</body>
+</html>

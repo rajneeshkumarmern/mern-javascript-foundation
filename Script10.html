@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Var Default Values and Constants</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    // Select element once
+    const output = document.getElementById("output");
+
+    // Print function
+    const print = (data) => {
+      output.innerHTML += data + "<br>";
+    };
+
+    // Heading
+    print("<u>Var Default Values and Constants</u><br>");
+
+    // Undefined variable
+    let x;
+    print(x);              // undefined
+    print(typeof x);       // "undefined"
+
+    // let y; 
+    // print(y);           // would work (undefined)
+    // print(typeof y);    // "undefined"
+
+    // var example (reassign allowed)
+    let a = 10;
+    print(a);
+
+    a = 20;
+    print(a);
+
+    // let example (reassign allowed)
+    let b = 100;
+    print(b);
+
+    b = 200;
+    print(b);
+
+    // const example (cannot reassign)
+    const c = 99;
+    print(c);
+
+    // c = 55; // ❌ Error: Assignment to constant variable
+
+    print("Done!!!");
+  </script>
+
+</body>
+</html>
